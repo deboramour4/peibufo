@@ -17,6 +17,8 @@
 		D8E739CD2598B5660082F4E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739CC2598B5660082F4E1 /* User.swift */; };
 		D8E739D12598B7640082F4E1 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739D02598B7640082F4E1 /* Member.swift */; };
 		D8E739D32598B9B70082F4E1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739D22598B9B70082F4E1 /* Bill.swift */; };
+		D8E739E125A24BF60082F4E1 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739E025A24BF60082F4E1 /* Tester.swift */; };
+		D8E739E325A2520B0082F4E1 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739E225A2520B0082F4E1 /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D8E739CC2598B5660082F4E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D8E739D02598B7640082F4E1 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		D8E739D22598B9B70082F4E1 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		D8E739E025A24BF60082F4E1 /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
+		D8E739E225A2520B0082F4E1 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				D8E739CC2598B5660082F4E1 /* User.swift */,
 				D8E739D02598B7640082F4E1 /* Member.swift */,
 				D8E739D22598B9B70082F4E1 /* Bill.swift */,
+				D8E739E225A2520B0082F4E1 /* Transaction.swift */,
+				D8E739E025A24BF60082F4E1 /* Tester.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 				D8E739CD2598B5660082F4E1 /* User.swift in Sources */,
 				D8E739D32598B9B70082F4E1 /* Bill.swift in Sources */,
 				D8E739D12598B7640082F4E1 /* Member.swift in Sources */,
+				D8E739E125A24BF60082F4E1 /* Tester.swift in Sources */,
 				D8E739CB2598B5370082F4E1 /* Group.swift in Sources */,
+				D8E739E325A2520B0082F4E1 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
