@@ -32,7 +32,7 @@ class Group {
         members.append(member)
     }
     
-    func addBill(payer: Member, amount: Double, paymentMethod: Bill.PayentMethod) {
+    func addBill(payer: Member, amount: Double, paymentMethod: Bill.PaymentMethod) {
         let bill = Bill(payer: payer, amount: amount, paymentMethod: paymentMethod, group: self)
         bills.append(bill) // Or save anywhere else
         divideBill(bill)
