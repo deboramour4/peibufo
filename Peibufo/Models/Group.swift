@@ -32,10 +32,24 @@ class Group {
         members.append(member)
     }
     
-    func addBill(payer: Member, amount: Double, paymentMethod: Bill.PaymentMethod) {
-        let bill = Bill(payer: payer, amount: amount, paymentMethod: paymentMethod, group: self)
-        bills.append(bill) // Or save anywhere else
-        divideBill(bill)
+    func addBill(payer: Member, amount: Double, paymentMethod: Bill.PaymentMethod) -> Bill? {
+        if payerIsInGroup(payer) {
+            let bill = Bill(payer: payer, amount: amount, paymentMethod: paymentMethod, group: self)
+            bills.append(bill)
+            divideBill(bill)
+            return bill
+        } else {
+            return nil
+        }
+    }
+    
+    func delete(bill: Bill) {
+        bills.removeAll { $0 == bill }
+        members.forEach { $0.deleteTransactions(of: bill) }
+    }
+    
+    func delete() {
+        // Delete from realm/coredata
     }
     
     // MARK: - Helpers
@@ -45,11 +59,28 @@ class Group {
         let membersWithoutPayer = membersExcluding(payer: bill.payer)
         membersWithoutPayer.forEach { member in
             bill.payer.credit(amount: amountPerMember, from: member, bill: bill)
-            member.debit(amount: amountPerMember, to: bill.payer, bill: bill)
+            member.debit(amount: amountPerMember, bill: bill)
         }
     }
     
     private func membersExcluding(payer: Member) -> [Member] {
         members.filter { $0 != payer }
+    }
+    
+    private func payerIsInGroup(_ payer: Member) -> Bool {
+        let payer = members.first { $0 == payer }
+        return payer != nil
+    }
+}
+
+extension Group: Equatable {
+    static func == (lhs: Group, rhs: Group) -> Bool {
+        lhs.title == rhs.title &&
+        lhs.description == rhs.description &&
+        lhs.owner == rhs.owner &&
+        lhs.members == rhs.members &&
+        lhs.bills == rhs.bills &&
+        lhs.isArchived == rhs.isArchived &&
+        lhs.initialDate == rhs.initialDate
     }
 }

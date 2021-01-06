@@ -6,6 +6,7 @@ class Member: User {
     var transactions: [Transaction] = []
     
     // MARK: - Computed vars
+    
     /// A positive balance means that, in resume, this member will receive money and a negative one means that she will pay money.
     var balance: Double {
         calculateBalance()
@@ -17,6 +18,7 @@ class Member: User {
     }
     
     // MARK: - Methods
+    
     /// Will recieve an amount of money from a specific member.
     func credit(amount: Double, from member: Member, bill: Bill) {
         let credit = Credit(amount: amount, member: member, bill: bill)
@@ -24,9 +26,14 @@ class Member: User {
     }
     
     /// Need to pay an amount of money to a specific member.
-    func debit(amount: Double, to member: Member, bill: Bill) {
-        let debit = Debit(amount: amount, member: member, bill: bill)
+    func debit(amount: Double, bill: Bill) {
+        let debit = Debit(amount: amount, member: bill.payer, bill: bill)
         transactions.append(debit)
+    }
+    
+    /// Delete all transactions related to a specific bill
+    func deleteTransactions(of bill: Bill) {
+        transactions.removeAll { $0.bill == bill}
     }
     
     // MARK: - Helpers
@@ -46,23 +53,6 @@ class Member: User {
             }
         }
         return membersBalance
-    }
-    
-    //TODO: Delete this function later
-    func printMembersBalance() {
-        print("\(name) | \(balance)")
-        
-        var balanceText = ""
-        for (key, value) in membersBalance {
-            balanceText += "{\(key.name):\(value)} "
-        }
-        print("Members Balance: \(balanceText)")
-        
-        var transactionsText = ""
-        for transaction in transactions {
-            transactionsText += " \(transaction.member.name):\(transaction.amount),"
-        }
-        print("Transactions: [\(transactionsText)]\n")
     }
 }
 
