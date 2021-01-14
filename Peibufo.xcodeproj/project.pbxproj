@@ -17,9 +17,21 @@
 		D8E739CD2598B5660082F4E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739CC2598B5660082F4E1 /* User.swift */; };
 		D8E739D12598B7640082F4E1 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739D02598B7640082F4E1 /* Member.swift */; };
 		D8E739D32598B9B70082F4E1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739D22598B9B70082F4E1 /* Bill.swift */; };
-		D8E739E125A24BF60082F4E1 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739E025A24BF60082F4E1 /* Tester.swift */; };
 		D8E739E325A2520B0082F4E1 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739E225A2520B0082F4E1 /* Transaction.swift */; };
+		D8E739EC25A4BD170082F4E1 /* GroupsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739EB25A4BD170082F4E1 /* GroupsRepository.swift */; };
+		D8E739F425A4CE6A0082F4E1 /* GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739F325A4CE6A0082F4E1 /* GroupTests.swift */; };
+		D8FE12D525A4DEFA008BA711 /* MemberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE12D425A4DEFA008BA711 /* MemberTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8E739F625A4CE6A0082F4E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8E739A62598AFD10082F4E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8E739AD2598AFD10082F4E1;
+			remoteInfo = Peibufo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D8E739AE2598AFD10082F4E1 /* Peibufo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peibufo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,12 +46,23 @@
 		D8E739CC2598B5660082F4E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D8E739D02598B7640082F4E1 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		D8E739D22598B9B70082F4E1 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
-		D8E739E025A24BF60082F4E1 /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
 		D8E739E225A2520B0082F4E1 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		D8E739EB25A4BD170082F4E1 /* GroupsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsRepository.swift; sourceTree = "<group>"; };
+		D8E739F125A4CE6A0082F4E1 /* PeibufoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeibufoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E739F325A4CE6A0082F4E1 /* GroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTests.swift; sourceTree = "<group>"; };
+		D8E739F525A4CE6A0082F4E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8FE12D425A4DEFA008BA711 /* MemberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D8E739AB2598AFD10082F4E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8E739EE25A4CE6A0082F4E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				D8E739B02598AFD10082F4E1 /* Peibufo */,
+				D8E739F225A4CE6A0082F4E1 /* PeibufoTests */,
 				D8E739AF2598AFD10082F4E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D8E739AE2598AFD10082F4E1 /* Peibufo.app */,
+				D8E739F125A4CE6A0082F4E1 /* PeibufoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,14 +140,32 @@
 		D8E739C82598B51A0082F4E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D8E739EA25A4BD060082F4E1 /* Repository */,
 				D8E739CA2598B5370082F4E1 /* Group.swift */,
 				D8E739CC2598B5660082F4E1 /* User.swift */,
 				D8E739D02598B7640082F4E1 /* Member.swift */,
 				D8E739D22598B9B70082F4E1 /* Bill.swift */,
 				D8E739E225A2520B0082F4E1 /* Transaction.swift */,
-				D8E739E025A24BF60082F4E1 /* Tester.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D8E739EA25A4BD060082F4E1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D8E739EB25A4BD170082F4E1 /* GroupsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D8E739F225A4CE6A0082F4E1 /* PeibufoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8E739F325A4CE6A0082F4E1 /* GroupTests.swift */,
+				D8FE12D425A4DEFA008BA711 /* MemberTests.swift */,
+				D8E739F525A4CE6A0082F4E1 /* Info.plist */,
+			);
+			path = PeibufoTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +188,24 @@
 			productReference = D8E739AE2598AFD10082F4E1 /* Peibufo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D8E739F025A4CE6A0082F4E1 /* PeibufoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8E739F825A4CE6A0082F4E1 /* Build configuration list for PBXNativeTarget "PeibufoTests" */;
+			buildPhases = (
+				D8E739ED25A4CE6A0082F4E1 /* Sources */,
+				D8E739EE25A4CE6A0082F4E1 /* Frameworks */,
+				D8E739EF25A4CE6A0082F4E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8E739F725A4CE6A0082F4E1 /* PBXTargetDependency */,
+			);
+			name = PeibufoTests;
+			productName = PeibufoTests;
+			productReference = D8E739F125A4CE6A0082F4E1 /* PeibufoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +218,10 @@
 				TargetAttributes = {
 					D8E739AD2598AFD10082F4E1 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					D8E739F025A4CE6A0082F4E1 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = D8E739AD2598AFD10082F4E1;
 					};
 				};
 			};
@@ -174,6 +239,7 @@
 			projectRoot = "";
 			targets = (
 				D8E739AD2598AFD10082F4E1 /* Peibufo */,
+				D8E739F025A4CE6A0082F4E1 /* PeibufoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +255,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8E739EF25A4CE6A0082F4E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -197,18 +270,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E739B22598AFD10082F4E1 /* AppDelegate.swift in Sources */,
+				D8E739EC25A4BD170082F4E1 /* GroupsRepository.swift in Sources */,
 				D8E739B42598AFD10082F4E1 /* SceneDelegate.swift in Sources */,
 				D8E739B62598AFD10082F4E1 /* ContentView.swift in Sources */,
 				D8E739CD2598B5660082F4E1 /* User.swift in Sources */,
 				D8E739D32598B9B70082F4E1 /* Bill.swift in Sources */,
 				D8E739D12598B7640082F4E1 /* Member.swift in Sources */,
-				D8E739E125A24BF60082F4E1 /* Tester.swift in Sources */,
 				D8E739CB2598B5370082F4E1 /* Group.swift in Sources */,
 				D8E739E325A2520B0082F4E1 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8E739ED25A4CE6A0082F4E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E739F425A4CE6A0082F4E1 /* GroupTests.swift in Sources */,
+				D8FE12D525A4DEFA008BA711 /* MemberTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8E739F725A4CE6A0082F4E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8E739AD2598AFD10082F4E1 /* Peibufo */;
+			targetProxy = D8E739F625A4CE6A0082F4E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D8E739BC2598AFD30082F4E1 /* LaunchScreen.storyboard */ = {
@@ -374,6 +464,46 @@
 			};
 			name = Release;
 		};
+		D8E739F925A4CE6A0082F4E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PeibufoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.deboraoliveira.PeibufoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Peibufo.app/Peibufo";
+			};
+			name = Debug;
+		};
+		D8E739FA25A4CE6A0082F4E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PeibufoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.deboraoliveira.PeibufoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Peibufo.app/Peibufo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -391,6 +521,15 @@
 			buildConfigurations = (
 				D8E739C32598AFD30082F4E1 /* Debug */,
 				D8E739C42598AFD30082F4E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E739F825A4CE6A0082F4E1 /* Build configuration list for PBXNativeTarget "PeibufoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E739F925A4CE6A0082F4E1 /* Debug */,
+				D8E739FA25A4CE6A0082F4E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

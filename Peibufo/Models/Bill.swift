@@ -25,3 +25,13 @@ class Bill {
         self.group = group
     }
 }
+
+extension Bill: Equatable {
+    static func == (lhs: Bill, rhs: Bill) -> Bool {
+        lhs.payer == rhs.payer &&
+        lhs.amount == rhs.amount &&
+        lhs.timestamp == rhs.timestamp &&
+        lhs.paymentMethod == rhs.paymentMethod &&
+        lhs.group?.title == rhs.group?.title
+    }
+}
