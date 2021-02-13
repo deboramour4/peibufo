@@ -44,8 +44,8 @@ class GroupTests: XCTestCase {
         group.addMember(thalia)
         group.addMember(weiby)
         let bill = group.addBill(payer: thalia, amount: 6.0, paymentMethod: .cash)
-        let _ = group.addBill(payer: debora, amount: 30.0, paymentMethod: .creditCard)
-        let _ = group.addBill(payer: weiby, amount: 54.0, paymentMethod: .debitCard)
+        _ = group.addBill(payer: debora, amount: 30.0, paymentMethod: .creditCard)
+        _ = group.addBill(payer: weiby, amount: 54.0, paymentMethod: .debitCard)
         XCTAssertEqual(group.bills.count, 3)
         XCTAssertEqual(bill?.amount, 6.0)
         XCTAssertEqual(bill?.paymentMethod, .cash)
@@ -59,11 +59,10 @@ class GroupTests: XCTestCase {
         XCTAssertNil(bill)
     }
     
-    
     func testDeleteBill() {
         group.addMember(weiby)
         group.addMember(thalia)
-        let _ = group.addBill(payer: debora, amount: 30.0, paymentMethod: .creditCard)
+        _ = group.addBill(payer: debora, amount: 30.0, paymentMethod: .creditCard)
         let bill = group.addBill(payer: weiby, amount: 15.0, paymentMethod: .debitCard)
         XCTAssertEqual(group.bills.count, 2)
         XCTAssertEqual(thalia.transactions.count, 2)

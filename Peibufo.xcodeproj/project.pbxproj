@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8689715B8434307F8C7D4EE9 /* Pods_PeibufoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D3E4C40E3955957CFCF0B0 /* Pods_PeibufoTests.framework */; };
+		B8B91210739018D5417521BC /* Pods_Peibufo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4EC9669CEB4B82595BA932 /* Pods_Peibufo.framework */; };
 		D8E739B22598AFD10082F4E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739B12598AFD10082F4E1 /* AppDelegate.swift */; };
 		D8E739B42598AFD10082F4E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739B32598AFD10082F4E1 /* SceneDelegate.swift */; };
 		D8E739B62598AFD10082F4E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E739B52598AFD10082F4E1 /* ContentView.swift */; };
@@ -34,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D3E4C40E3955957CFCF0B0 /* Pods_PeibufoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeibufoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14795CB5AF18F4D17C0A93FB /* Pods-Peibufo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peibufo.release.xcconfig"; path = "Target Support Files/Pods-Peibufo/Pods-Peibufo.release.xcconfig"; sourceTree = "<group>"; };
+		5C40D329C8B99601BCA3ED80 /* Pods-PeibufoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeibufoTests.release.xcconfig"; path = "Target Support Files/Pods-PeibufoTests/Pods-PeibufoTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A4EC9669CEB4B82595BA932 /* Pods_Peibufo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peibufo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		885D13C1BBB8A6CD24140D5E /* Pods-PeibufoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeibufoTests.debug.xcconfig"; path = "Target Support Files/Pods-PeibufoTests/Pods-PeibufoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0D06A1AAA3C2C4AAF82FC3C /* Pods-Peibufo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peibufo.debug.xcconfig"; path = "Target Support Files/Pods-Peibufo/Pods-Peibufo.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E739AE2598AFD10082F4E1 /* Peibufo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peibufo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E739B12598AFD10082F4E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E739B32598AFD10082F4E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B91210739018D5417521BC /* Pods_Peibufo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,18 +75,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8689715B8434307F8C7D4EE9 /* Pods_PeibufoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188895038199506D79FDF4A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A4EC9669CEB4B82595BA932 /* Pods_Peibufo.framework */,
+				09D3E4C40E3955957CFCF0B0 /* Pods_PeibufoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CC7DA6188264872E827B0D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0D06A1AAA3C2C4AAF82FC3C /* Pods-Peibufo.debug.xcconfig */,
+				14795CB5AF18F4D17C0A93FB /* Pods-Peibufo.release.xcconfig */,
+				885D13C1BBB8A6CD24140D5E /* Pods-PeibufoTests.debug.xcconfig */,
+				5C40D329C8B99601BCA3ED80 /* Pods-PeibufoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D8E739A52598AFD10082F4E1 = {
 			isa = PBXGroup;
 			children = (
 				D8E739B02598AFD10082F4E1 /* Peibufo */,
 				D8E739F225A4CE6A0082F4E1 /* PeibufoTests */,
 				D8E739AF2598AFD10082F4E1 /* Products */,
+				8CC7DA6188264872E827B0D8 /* Pods */,
+				188895038199506D79FDF4A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8E739C22598AFD30082F4E1 /* Build configuration list for PBXNativeTarget "Peibufo" */;
 			buildPhases = (
+				F829D3A3FC0EF961A53CC4CB /* [CP] Check Pods Manifest.lock */,
 				D8E739AA2598AFD10082F4E1 /* Sources */,
 				D8E739AB2598AFD10082F4E1 /* Frameworks */,
 				D8E739AC2598AFD10082F4E1 /* Resources */,
+				62E06258C7EAE576DA6F2A6E /* [CP] Embed Pods Frameworks */,
+				E59185FF25D873BE00E7D175 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -192,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8E739F825A4CE6A0082F4E1 /* Build configuration list for PBXNativeTarget "PeibufoTests" */;
 			buildPhases = (
+				68534FBAD078761250A9C479 /* [CP] Check Pods Manifest.lock */,
 				D8E739ED25A4CE6A0082F4E1 /* Sources */,
 				D8E739EE25A4CE6A0082F4E1 /* Frameworks */,
 				D8E739EF25A4CE6A0082F4E1 /* Resources */,
@@ -263,6 +299,88 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62E06258C7EAE576DA6F2A6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Peibufo/Pods-Peibufo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Peibufo/Pods-Peibufo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Peibufo/Pods-Peibufo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68534FBAD078761250A9C479 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeibufoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E59185FF25D873BE00E7D175 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		F829D3A3FC0EF961A53CC4CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Peibufo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8E739AA2598AFD10082F4E1 /* Sources */ = {
@@ -428,10 +546,12 @@
 		};
 		D8E739C32598AFD30082F4E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D06A1AAA3C2C4AAF82FC3C /* Pods-Peibufo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Peibufo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Peibufo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -447,10 +567,12 @@
 		};
 		D8E739C42598AFD30082F4E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14795CB5AF18F4D17C0A93FB /* Pods-Peibufo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Peibufo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Peibufo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,11 +588,12 @@
 		};
 		D8E739F925A4CE6A0082F4E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 885D13C1BBB8A6CD24140D5E /* Pods-PeibufoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PeibufoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,11 +609,12 @@
 		};
 		D8E739FA25A4CE6A0082F4E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C40D329C8B99601BCA3ED80 /* Pods-PeibufoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PeibufoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
