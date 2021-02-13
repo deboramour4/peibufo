@@ -25,15 +25,15 @@ class MemberTests: XCTestCase {
     }
     
     func testBalance() {
-        let _ = group.addBill(payer: joao, amount: 24.0, paymentMethod: .cash)
-        let _ = group.addBill(payer: maria, amount: 150.0, paymentMethod: .debitCard)
+        _ = group.addBill(payer: joao, amount: 24.0, paymentMethod: .cash)
+        _ = group.addBill(payer: maria, amount: 150.0, paymentMethod: .debitCard)
         XCTAssertEqual(member.balance, -58)
         XCTAssertEqual(maria.balance, 92)
         XCTAssertEqual(joao.balance, -34)
     }
     
     func testMembersBalance() {
-        let _ = group.addBill(payer: maria, amount: 150.0, paymentMethod: .creditCard)
+        _ = group.addBill(payer: maria, amount: 150.0, paymentMethod: .creditCard)
         XCTAssertEqual(member.membersBalance[joao], nil)
         XCTAssertEqual(member.membersBalance[maria], -50)
         XCTAssertEqual(joao.membersBalance[maria], -50)
